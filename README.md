@@ -5,9 +5,9 @@ This project is a complete ETL (Extract, Transform, Load) pipeline built using P
 
 The project is organized into two main Python scripts located in the `etl/` folder:
 
-1. `extract_from_api.py`: This script uses the `requests` and `pandas` libraries to fetch data from the API endpoints for products and orders. It flattens nested JSON structures (like the product `rating` and order `items`), and then saves the cleaned data into CSV files inside the `data/` folder.
+Data Extraction and Cleaning: Fetched product and order data from an external API, then cleaned and normalized the data using data manipulation techniques. This included flattening nested JSON structures such as product ratings and order items, followed by saving the cleaned datasets to CSV format.
 
-2. `load_to_sqlserver.py`: This script connects to a local SQL Server instance using `pyodbc`, creates three tables (`products`, `orders`, and `order_items`) if they don’t already exist, and loads the CSV data into those tables. It includes error handling and data cleaning steps (e.g., unpacking nested values, type conversions) before loading the data.
+Data Loading into SQL Server: Connected to a local SQL Server, created structured tables (products, orders, and order_items) with appropriate schema definitions, and loaded the cleaned data into these tables. Steps included error handling, converting data types, and unpacking nested values to align with the database structure.
 
 By completing this project, I learned how to:
 - Work with public REST APIs and nested JSON data
